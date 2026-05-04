@@ -1,0 +1,48 @@
+# === ScanData (大檔案，全部排除) ===
+ScanData/*
+!ScanData/.gitkeep
+
+# === Models (ML 模型) ===
+Models/**/*.pt
+Models/**/*.mlpackage
+Models/**/*.mlmodel
+Models/**/*.onnx
+!Models/.gitkeep
+
+# === Point Clouds ===
+*.ply
+*.laz
+*.las
+*.pcd
+*.e57
+
+# === Python ===
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# === macOS ===
+.DS_Store
+*.swp
+*~
+
+# === Xcode ===
+ForestScanner/build/
+ForestScanner/DerivedData/
+ForestScanner/*.xcuserdata/
+
+# === Docker ===
+Tools/data/
+
+# === IDE ===
+.idea/
+*.code-workspace
+
+# === Environment ===
+.env
+.env.local
+.env.production

@@ -1,0 +1,37 @@
+# ForestScanner Post-Processing Pipeline
+# Python 3.11+
+# Install: pip install -r requirements.txt
+
+# === Core ===
+numpy>=1.24
+scipy>=1.11
+pandas>=2.0
+
+# === Image Processing ===
+opencv-python>=4.8
+Pillow>=10.0
+
+# === 360 Panorama ===
+py360convert>=0.1.0
+
+# === Point Cloud ===
+open3d>=0.18
+
+# === YOLO / ML ===
+ultralytics>=8.1
+torch>=2.1
+
+# === GIS ===
+geopandas>=0.14
+shapely>=2.0
+pyproj>=3.6
+geojson>=3.1
+
+# === Testing ===
+pytest>=7.4
+pytest-cov>=4.1
+
+# === Utilities ===
+tqdm>=4.66
+pyyaml>=6.0
+click>=8.1

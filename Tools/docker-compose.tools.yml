@@ -1,0 +1,28 @@
+version: "3.8"
+
+# ForestScanner 本地開發工具
+# 使用方式: docker compose -f Tools/docker-compose.tools.yml up -d
+
+services:
+  # === 本地 AI (Ollama + Open WebUI) ===
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    ports:
+      - "3000:8080"
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+    volumes:
+      - open-webui-data:/app/backend/data
+    restart: unless-stopped
+
+  # === IT 工具箱 ===
+  it-tools:
+    image: corentinth/it-tools:latest
+    container_name: it-tools
+    ports:
+      - "8070:80"
+    restart: unless-stopped
+
+volumes:
+  open-webui-data:
